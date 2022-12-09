@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./compte-rendu-tp2.css">
+	<title>Compte Rendu de TP2 - GIBOZ Alexandre</title>
+	<style>
+		/**{*/
+		/*	font-family: "Sans Serif Collection" !important;*/
+		/*}*/
+		/*!**/
+		/*Question 1-3*/
+		/**!*/
+		/*h1{*/
+		/*	font-size: 24px;*/
+		/*}*/
+		/*!*h2{*!*/
+		/*!*	font-size: 20px;*!*/
+		/*!*}*!*/
+		/*h3{*/
+		/*	font-size: 18px;*/
+		/*}*/
+
+		/*!**/
+		/*Question 1-4*/
+		/* *!*/
+		/*h2{*/
+		/*	font-size: 20px;*/
+		/*	color: lightgray;*/
+		/*}*/
+
+		/*!**/
+		/*Question 1-5*/
+		/* *!*/
+		/*.centered{*/
+		/*	text-align: center;*/
+		/*}*/
+
+		/*!**/
+		/*Question 1-6*/
+		/* *!*/
+		/*.right{*/
+		/*	text-align: right;*/
+		/*}*/
+
+		/*!**/
+		/*Question 1-7*/
+		/* *!*/
+		/*a{*/
+		/*	font-weight: bold;*/
+		/*}*/
+		/*a:hover{*/
+		/*	color: teal;*/
+		/*}*/
+	</style>
+</head>
+
+<body>
+	<div class="right titles">
+		<p>Alexandre GIBOZ</p>
+	</div>
+	<h1 class="centered titles">Compte rendu TP2</h1>
+	<div class="categ">
+		<h2 style="color: red !important;">Exercice 1 - Style de base</h2>
+		<ol class="roman">
+			<li>
+				<h3>Ajoutez en utilisant la balise h2 le titre de l'exercice courant puis ajoutez à la balise h2 un attribut style qui permet de mettre le titre de l'exercice en rouge brique.</h3>
+				<p>
+					Le titre de l'exercice 1 apparait en rouge grace à la propriété "color: red" au sein de l'attribut style.
+				</p>
+			</li>
+			<li>
+				<h3>Déclarez une balise style à l'intérieur des balises head du document, puis faites en sorte que tout le document utilise une police sans-serif.</h3>
+				<p>
+					Le wildcard "*" permet d'affecter chaque élément du document HTML.
+					<br>Sachant que l'HTLM suit le modèle d'un arbre, affecter la propriété de font-style à l'élément "HTML" fonctionne également.
+					<br>L'option "!important" permet de privilégier cette propriété par rapport à d'autres pouvant être définies ailleurs.
+				</p>
+			</li>
+			<li>
+				<h3>Faites en sorte que la balise h1 corresponde à une police de 24 points, la balise h2 à une police de 20 points et la balise h3 à une police 18 points.</h3>
+				<p>
+					On sélectionne chaque balise mentionnée, et on précise pour chacun un "font-size".
+					<br>On inclut la réponse dans la balise "style" dans le head.
+				</p>
+				<img width="400" src="./img/1-3.png" alt="code-1-3">
+			</li>
+			<li>
+				<h3>Faites en sorte que les balises h2 soient affichées en gris clair (lightgray), à part le titre de cet exercice (qui doit rester en rouge brique).</h3>
+				<p>
+					On rajoute un attribut "color" dans le sélecteur "h2" que l'on a créé auparavant.
+				</p>
+				<img width="400" src="./img/1-4.png" alt="code-1-4">
+			</li>
+			<li>
+				<h3>
+					Faites en sorte que le titre du compte rendu de TP soit centré.
+					<br>Pour cela, vous allez créer une classe "centered" et ajouter un attribut class à la balise englobant le titre du compte rendu.
+					<br>Déclarez ensuite que le style pour la classe "centered" est centré.
+				</h3>
+				<p>
+					On précise au sein de la balise h1 du titre que l'élément fait partie de la classe "centered".
+					<br>On ajoute ensuite la propriété "text-align" afin de centrer le texte.
+					<br>Sachant que h1 est un élément bloc, il prendra la totalité de la largeur, et sera donc bel et bien centré.
+				</p>
+				<img width="400" src="./img/1-5.png" alt="code-1-5">
+			</li>
+			<li>
+				<h3>On veut que votre nom soit aligné à droite. Commencez par déclarer votre nom entre des balises div puis ajoutez une classe right permettant d'aligner le texte à droite.</h3>
+				<p>
+					De la même façon que pour la question précédente, on passe un paramètre "text-align" avec une valeur "right".
+				</p>
+				<img width="400" src="./img/1-6-2.png" alt="code-1-6">
+				<br>
+				<img width="400" src="./img/1-6-1.png" alt="code-1-6">
+			</li>
+			<li>
+				<h3>Ajoutez un lien vers le cours http://forax.github.io/course/progweb/ puis faites en sorte que le lien soit en gras si la souris n'est pas sur le lien et en teal si la souris survole le lien.</h3>
+				<a href="http://forax.github.io/course/progweb/">Lien vers le cours.</a>
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Exercice 2 - Style de liste et de table</h2>
+		<ol class="roman">
+			<li>
+				<h3>On veut maintenant créer une feuille de style externe, c'est-à-dire une feuille de style déclarée non pas à l'intérieur de compte-rendu-tp2.html mais dans un fichier externe nommé compte-rendu-tp2.css.</h3>
+				<p>
+					Le contenu de la balise "style" dans le "head" du fichier a été déplacé au sein d'un fichier .css dédié.
+					<br>On peut à présent complètement commenter cette partie du fichier HTML.
+				</p>
+			</li>
+			<li>
+				<h3>Faites en sorte que la liste des questions de cet exercice et de l'exercice précédent utilise les chiffres romains (en majuscule) plutôt que les traditionnels chiffres 1, 2, 3, etc.</h3>
+				<p>
+					La propriété "list-style" permet de modifier l'aspect de la liste.
+					<br>Seul cette liste et la liste précédente doivent utiliser ce format (et non les listes à venir).
+					<br>Pour ce faire, on utilise cette propriété sur une classe précise (.roman).
+					<br>Cette classe sera donnée aux balises "ol".
+				</p>
+				<img width="400" src="./img/2-2.png" alt="code-2-2">
+			</li>
+			<li>
+				<h3>Donc dans un premier temps, créez la table HTML en utilisant les balises table, th et td dans votre compte rendu.</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Rang</th>
+							<th>Titre</th>
+							<th>Recette</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Doctor Strange in the Multiverse of Madness</td>
+							<td>$187,420,998</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Black Panther: Wakanda Forever</td>
+							<td>$181,339,761</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Jurassic World Dominion</td>
+							<td>$145,075,625</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Thor: Love and Thunder</td>
+							<td>$144,165,107</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>The Batman</td>
+							<td>$134,008,624</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li>
+				<h3>Faites en sorte que la table occupe toute la largeur du compte rendu.</h3>
+				<p>
+					La propriété "width" permet de gérer la largeur que prend un élément par rapport à l'espace accordé par l'élément au dessus de lui.
+				</p>
+				<img width="400" src="./img/2-4.png" alt="code-2-4">
+			</li>
+			<li>
+				<h3>Centrez les titres et changer la police de caractères des titres pour utiliser des petites majuscules (small caps).</h3>
+				<p>
+					La propriété "text-align: center" permet de centrer le texte.
+					<br>La propriété "font-family" permet de changer la police d'écriture
+					<br>"Font-Variant: small-caps" permet de répondre au besoin exprimé en dernier.
+				</p>
+				<img width="400" src="./img/2-5.png" alt="code-2-5">
+			</li>
+			<li>
+				<h3>Aérez la table avec la propriété padding pour que le texte ne soit pas collé aux bordures.</h3>
+				<p>On ajoute du padding à la fois aux balises "th" et "td"</p>
+				<img width="400" src="./img/2-6.png" alt="code-2-6">
+			</li>
+			<li>
+				<h3>Faites en sorte que les valeurs des deux premières colonnes (rang et titre) soient alignées à gauche et que les valeurs de la dernière colonne soient centrées.</h3>
+				<p>
+					On commence par définir un alignement de texte centré affectant chaque balise "tr".
+					<br>En dessous de cela, on spécifie un alignement de texte centré qui affecte la dernière balise "td" fille de chaque balise "tr"
+				</p>
+				<img width="400" src="./img/2-7.png" alt="code-2-7">
+			</li>
+			<li>
+				<h3>Changez la couleur de fond des lignes paires (even) pour mettre du vert clair en utilisant la pseudo-classe :nth-child.</h3>
+				<p>
+					On sélectionne toutes les balises "tr" paires, et on y applique une modification de la couleur de fond (background-color)
+				</p>
+				<img width="400" src="./img/2-8.png" alt="code-2-8">
+			</li>
+			<li>
+				<h3>Faites en sorte que si l'on survole une ligne avec la souris la couleur du fond corresponde à 18 sur 255 de rouge, 32 sur 255 de vert et 43 sur 255 de bleu en utilisant un codage hexadécimal.</h3>
+				<p>
+					On applique une modification de couleur de fond (background-color) mais en passant des paramètres "rgb" au lieu d'un code hexadécimal.
+				</p>
+				<img width="400" src="./img/2-9.png" alt="code-2-9">
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Exercice 3 - Vignettes</h2>
+		<ol>
+			<li>
+				<h3>Récupérez les 6 images d'animaux ainsi que le fichier exo1.html dans le répertoire.</h3>
+				<p>
+					Les 6 images ont été placées dans le répertoire suivant: "./img/exo3-repo/".
+					<br>Le fichier "exo3.html" est dans le répertoire racine.
+					<br>Les paramètres de styles seront indiqués dans la partie "style" du header.
+				</p>
+			</li>
+			<li>
+				<h3>Faites en sorte que toutes les images à l'intérieur des boites (pas les autres) aient une largeur (width) de 220 pixels.</h3>
+				<p>
+					On sélectionne les images filles d'une balise "div" uniquement. On applique ensuite un paramètre "width" de 220 pixels comme demandé.
+				</p>
+				<img width="400" src="./img/3-2.png" alt="code-3-2">
+				<br>
+				<img width="1400" src="./img/3-2-prev.png" alt="prev-3-2">
+			</li>
+			<li>
+				<h3>Au lieu d'afficher les images verticalement, on souhaite les afficher horizontalement (float).</h3>
+				<p>
+					On applique un float vers la gauche pour chaque balise div directement fille du corp du document (excluant donc les div de texte en dessous des images).
+				</p>
+				<img width="400" src="./img/3-3.png" alt="code-3-3">
+				<br>
+				<img width="1400" src="./img/3-3-prev.png" alt="prev-3-3">
+			</li>
+			<li>
+				<h3>Que se passe-t-il si l'on fait varier la taille de la fenêtre du navigateur horizontalement ?</h3>
+				<p>
+					Si la taille horizontale diminue trop, les images n'ayant plus suffisamment de place pour s'afficher apparaitront alors une colonne en dessous des autres.
+				</p>
+				<img width="1400" src="./img/3-4-prev.png" alt="prev-3-4">
+			</li>
+			<li>
+				<h3>
+					Vérifiez que vous pouvez aussi mettre toutes les images à droite en changeant juste un mot dans la partie CSS du document.
+					<br>Puis remettez les images alignées à gauche.
+				</h3>
+				<p>
+					Pour ce faire, on reprend le paramètre "float: left" attribué lors de la question 3-3, et on en remplace la valeur par "right".
+				</p>
+				<img width="400" src="./img/3-5.png" alt="code-3-5">
+				<br>
+				<img width="1400" src="./img/3-5-prev.png" alt="prev-3-5">
+			</li>
+			<li>
+				<h3>
+					Faites en sorte que les titres (animal1, animal2, etc.) soient affichés en blanc sur fond noir et soient centrés horizontalement par rapport à la boite qui les contient.
+					<br>Jouez de plus avec la propriété padding pour avoir un espacement convenable.
+				</h3>
+				<p>
+					On sélectionne les balises "div" filles d'autres "div" (ce qui correspond aux zones de titres décrivant les images).
+					<br>On applique les effets demandés ensuite, ainsi qu'un padding de 15px afin d'avoir un rendu plus aéré et correspondant mieux à la photo de résultat.
+				</p>
+				<img width="400" src="./img/3-6.png" alt="code-3-6">
+				<br>
+				<img width="1400" src="./img/3-6-prev.png" alt="prev-3-6">
+			</li>
+			<li>
+				<h3>Espacez les unes des autres les boites contenant les images avec la propriété margin.</h3>
+				<p>
+					On effectuer un margin sur la gauche pour chaque div, et cela si une autre div est présente juste après.
+					<br>De ce fait, le margin ne sera appliqué que si une balise de div suit la balise à laquelle on applique l'effet de margin.
+				</p>
+				<img width="400" src="./img/3-7.png" alt="code-3-7">
+				<br>
+				<img width="1400" src="./img/3-7-prev.png" alt="prev-3-7">
+			</li>
+			<li>
+				<h3>Faites en sorte que les images à l'intérieur des boites aient une bordure d'un pixel de largeur de couleur #aaaaaa.</h3>
+				<p>
+					On applique à chaque image un paramètre de bordure.
+					<br>Ce paramètre définit (dans l'ordre) l'épaisseur de la bordure, le type de bordure, et sa couleur.
+				</p>
+				<img width="400" src="./img/3-8.png" alt="code-3-8">
+				<br>
+				<img width="1400" src="./img/3-8-prev.png" alt="prev-3-8">
+			</li>
+			<li>
+				<h3>Changez l'opacité (propriété opacity) lorsque l'utilisateur passe sa souris au-dessus d'une image dans une boite.</h3>
+				<p>
+					On sélectionne chaque image (avec un :hover afin d'appliquer l'effet que lors d'un survol).
+					<br>L'intensité de l'opacité se définit entre 0 (0%) et 1 (100%).
+					<br>Dans ce cas précis, on réduit l'opacité de 60% (donc 0.4 sur 1).
+					<br>La deuxième image illustre le résultat obtenu en survolant l'image n°5
+				</p>
+				<img width="400" src="./img/3-9.png" alt="code-3-9">
+				<br>
+				<img width="1400" src="./img/3-9-prev.png" alt="prev-3-9">
+			</li>
+			<li>
+				<h3>
+					Faites en sorte que les titres soient accolés par le bas à l'image et mordent légèrement sur l'image (de 5 pixels par exemple).
+					<br>Note: l'idée est de placer la boite contenant le texte relativement par rapport à la boite contenant l'image.
+				</h3>
+				<p>
+					On re-seléctionne les titres d'images.
+					<br>On définit une position relative, puis on réduit l'espacement entre l'image et le titre (margin du dessus).
+					<br>On passe un z-index négatif afin de placer le titre en dessous de l'image, ce qui fait ressortir la fine bordure blanche de l'image.
+					<br>Le margin négatif (servant à resserer le titre et l'image), sera légèrement plus grand que le véritable espace, afin que cela déborde davantage et qu'on remarque la bordure
+					<br>Enfin, on "clear" l'effet de float pour la classe ".end", ce qui permet d'afficher la phrase de fin en dessous des images, et non à leur gauche.
+				</p>
+				<img width="400" src="./img/3-10.png" alt="code-3-10">
+				<br>
+				<img width="1400" src="./img/3-10-prev.png" alt="prev-3-10">
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Exercice 4 - Barre de menu</h2>
+		<ol>
+			<li>
+				<h3>Faites en sorte que la liste ait une position fixe, en haut à gauche de la partie affichage du navigateur.</h3>
+				<p>
+					On applique une position fixe (position: fixed) à l'unique balise "ul" de la page (qui englobe chaque élément de la liste).
+					<br>Par ailleurs, on définit une hauteur élevée du "body" (qui n'affecte pas la liste), afin de pouvoir faire défiler vers le bas la page, et s'assurer du bon fonctionnement du "fixed".
+				</p>
+				<img width="400" src="./img/4-1.png" alt="code-4-1">
+			</li>
+			<li>
+				<h3>Retirez le style par défaut des items de liste (avec list-style-type) pour qu'il n'y ait pas de style par défaut.</h3>
+				<p>
+					On rajoute au sélecteur précédemment spécifié (affectant la balise "ul") qu'on ne souhaite aucun style de liste.
+				</p>
+				<img width="400" src="./img/4-2.png" alt="code-4-2">
+				<br>
+				<img width="250" src="./img/4-2-prev.png" alt="prev-4-2">
+			</li>
+			<li>
+				<h3>Affichez les items en gras et avec une police Courrier (ou sinon serif).</h3>
+				<p>
+					On sélectionne les items de la liste (à savoir les balises "li" filles d'une balise "ul").
+				</p>
+				<img width="400" src="./img/4-3.png" alt="code-4-3">
+				<br>
+				<img width="250" src="./img/4-3-prev.png" alt="prev-4-3">
+			</li>
+			<li>
+				<h3>Faites en sorte que les items soient affichés horizontalement collés à gauche et non plus verticalement.</h3>
+				<p>
+					Afin d'aligner les items à gauche, on rajoute simplement un "float: left" sur les items.
+					<br>Afin d'éviter des déclarations innutiles, on rajoute cette propriété à la déclaration effectuée pour la question précédente.
+				</p>
+				<img width="400" src="./img/4-4.png" alt="code-4-4">
+				<br>
+				<img width="250" src="./img/4-4-prev.png" alt="prev-4-4">
+			</li>
+			<li>
+				<h3>Faites en sorte que les items aient une largeur de 120 pixels et ajoutez un espacement d'une dizaine de pixel entre les items.</h3>
+				<p>
+					On rajoute à la sélection d'items une propriété "width" permettant de définir une largeur constante pour chaque item.
+					<br>De plus, un margin appliquant un décalage de 5 pixels de chaque côté permet un espacement de 10 pixels entre chaque item.
+					<br>Afin de mieux percevoir la largeur et l'espacement, une couleur de fond (aqua) a été ajoutée.
+				</p>
+				<img width="400" src="./img/4-5.png" alt="code-4-5">
+				<br>
+				<img width="500" src="./img/4-5-prev.png" alt="prev-4-5">
+			</li>
+			<li>
+				<h3>Changez le fond du menu pour qu'il soit de couleur bleu tirant sur le vert (teal), puis en chantant yellow submarine, changez la couleur des items pour qu'ils soient en jaune.</h3>
+				<p>
+					On ajoute des propriétés background-color et color, avec les couleurs adéquates.
+					<br>Background-color pour la liste (ul)
+					<br>Color pour les items
+				</p>
+				<img width="500" src="./img/4-6-prev.png" alt="code-4-6">
+			</li>
+			<li>
+				<h3>Fixez la hauteur (height) du menu à 48 pixels puis faites en sorte que le menu occupe toute la largeur (width).</h3>
+				<p>
+					L'ensemble des modifications affectera la liste (balise "ul")
+					<br>On commence par placer la liste tout en haut de la page (pour avoir un rendu propre). Cela passe par un top:0 et un left:0 afin qu'elle soit bien en haut a gauche.
+					<br>Un margin-top de 0 est également nécessaire afin d'obtenir un rendu propre.
+					<br>On passe ensuite les paramètres demandés.
+				</p>
+				<img width="400" src="./img/4-7.png" alt="code-4-7">
+				<br>
+				<img width="1200" src="./img/4-7-prev.png" alt="prev-4-7">
+			</li>
+			<li>
+				<h3>Faites en sorte d'avoir un item 'Help' soit affiché à droite de la barre de menu.</h3>
+				<p>
+					Pour ce faire, on applique une classe "right" à l'élément help, afin d'avoir une manipulation plus simple.
+					<br>A noter qu'étant donné que l'élément est situé en dernière position, il aurait été possible de le manipuler avec "ul li:last-child".
+					<br>Une fois l'item sélectionné, on applique un flottage vers la droite.
+				</p>
+				<img width="400" src="img/4-8-2.png" alt="code-4-8">
+				<br>
+				<img width="400" src="./img/4-8-2.png" alt="code-4-8">
+				<br>
+				<img width="1200" src="./img/4-8-prev.png" alt="prev-4-8">
+			</li>
+			<li>
+				<h3>Affichez une ligne de 2 pixels en bas du menu.</h3>
+				<p>
+					Pour ce faire, on applique une propriété "border-bottom", afin que la bordure n'apparaisse qu'en bas.
+				</p>
+				<img width="400" src="./img/4-9.png" alt="code-4-9">
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Conclusion Personnelle</h2>
+		<p>
+			Ce second TP se focalise essentiellement sur le CSS.
+			<br>Il nous permet de nous familiariser avec le positionnement des éléments HTML, cela via la propriété "float" en particulier.
+			<br>La manipulation de la hauteur, largeur et propriété de position (fixed, relative...) aide également.
+			<br>
+			<br>Le but est, au final, de nous apprendre à positionner convenablement les éléments d'une page et de se familiariser au mieux avec les propriétés permettant d'en modifier l'apparence.
+			<br>(background-color, color, font-size ...).
+			<br>
+			<br>L'ensemble des documents HTLM (compte-rendu, exo3 et exo4) passent le Nu HTML Checker de W3c sans erreur.
+		</p>
+	</div>
+</body>
+
+</html>

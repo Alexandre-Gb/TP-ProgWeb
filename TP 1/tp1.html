@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./tp1.css">
+	<title>Compte Rendu de TP1</title>
+</head>
+
+<body>
+	<table class="cart">
+		<tbody>
+			<tr>
+				<td></td>
+				<td>ALEXANDRE GIBOZ</td>
+			</tr>
+			<tr>
+				<td>ESIPE INFO 1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="2">TP 1 de Programmatio Web</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="categ">
+		<h2>Exercice 1 - Document HTML de base</h2>
+		<ol>
+			<li>-</li>
+			<li>
+				<h3>A quoi servent les tags h1, h2 et h3 ?</h3>
+				<p>
+					Les tags h1, h2 et h3 correspondent aux titres.
+					<br>
+					Le numéro correspond à l'importance (du plus important au moins important).
+				</p>
+			</li>
+			<li>
+				<h3>A quoi servent le tag p ?</h3>
+				<p>
+					Le tag p correspond aux paragraphes.
+				</p>
+			</li>
+			<li>
+				<h3>Ajoutez à votre compte rendu cette phrase:</h3>
+				<p>
+					Les tags HTML commencent par une balise ouvrante &lt;foo&gt; et finissent
+					par une balise fermante &lt;/foo&gt;
+				</p>
+			<li>
+				<h3>Comment mettre en gras ou en italique ?</h3>
+				<p>
+					On utilise le tag &lt;b&gt; (et &lt;/b&gt;) pour mettre un texte en gras.
+					<br>
+					On utilise le tag &lt;i&gt; (et &lt;/i&gt;) pour mettre un texte en italique.
+				</p>
+			</li>
+			<li>
+				<h3>Et comment faire pour mettre un mot à la fois en gras et en italique ? </h3>
+				<p>
+					Pour mettre un mot en italique et en gras, il suffit de combiner les deux tags:
+					<b>
+						<i>
+							texte
+						</i>
+					</b>
+				</p>
+			</li>
+			<li>
+				<h3>On souhaite que le titre de la fenêtre du navigateur soit "Compte Rendu de TP1", comment faire ?
+				</h3>
+				<p>
+					Pour donner le titre spécifié à la page, il faut ajouter une balise &lt;title&gt; au sein du
+					&lt;header&gt;:
+					<br>
+					On spécifie le titre souhaité de la page entre la balise ouvrante et fermante de "title".
+				</p>
+			</li>
+			<li>
+				<h3>Ajoutez un lien (le tag A) vers le cours avec comme titre cours de programmation web. </h3>
+				<a href="http://forax.github.io/course/progweb/#/">
+					cours de programmation web
+				</a>
+			</li>
+			<li>-</li>
+			<li>
+				<h3>Inclure la photo mon-arbre-a-moi.jpg</h3>
+				<img src="./mon-arbre-a-moi.jpg" width="750" alt="photo de mon arbre">
+			</li>
+			<li>
+				<h3>Creér et inclure le fichier tp1.css</h3>
+				<p class="q-11">Fait. Ce texte apparait en rouge grace au fichier css.</p>
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Exercice 2 - Uniform Resource Locator</h2>
+		<ol>
+			<li>
+				<h3>Quel est le nom de la machine à laquelle vous accédez ? </h3>
+				<p>
+					Le nom de la machine est: "monge".
+				</p>
+				<h3> Quel est le nom de domaine auquel vous accédez ? </h3>
+				<p>
+					Le nom du domaine auquel on accède est: "univ-mlv.fr"
+				</p>
+			</li>
+			<li>
+				<h3>À quoi correspond la première ligne de la réponse ? </h3>
+				<p>
+					La première ligne retourne l'adresse IP associée au site.
+					<br>
+					Il est possible d'accéder directement au site web en entrant directement l'adresse IP retournée.
+				</p>
+				<h3>À quoi correspond la seconde ligne de la réponse ? </h3>
+				<p>
+					La seconde ligne retourne le numéro de priorité du service de mail.
+				</p>
+			</li>
+			<li>
+				<h3>A votre avis, pourquoi utilise-t-on des noms pour les machines plutôt que des adresses IP ? </h3>
+				<p>
+					Retenir l'adresse IP de chaque site serait bien peu pratique et demanderait un travail de mémoire
+					conséquent pour chaque utilisateur.
+					<br>
+					Retenir un nom unique et concis semble une meilleure idée que 4 suites de nombres.
+				</p>
+			</li>
+			<li>
+				<h3>Que se passe-t-il si on essaye d'accéder à la page du cours dans le browser en remplaçant le nom de
+					la machine par l'adresse IP trouvée précédemment ? </h3>
+				<p>
+					Si l'on essaye d'accéder à la page en passant directement l'adresse IP, on obtient une erreur 404.
+				</p>
+			</li>
+			<li>
+				<h3>Qu'affiche la commande traceroute ? </h3>
+				<p>
+					Traceroute affiche la liste des routeurs par lesquels notre requête HTTP passe afin d'atteindre
+					forax.github.io
+				</p>
+				<h3>Quel est le nom du routeur de sortie (le premier que vous rencontrez) ? </h3>
+				<p>
+					Le nom du routeur de sortie est "gwetud.u-pem.fr"
+				</p>
+				<h3>Comment s'appelle le réseau sur lequel est connecté l'université (le nom de domaine du routeur après
+					le routeur de sortie) ? </h3>
+				<p>
+					Le réseau est 195.220.83.114.
+				</p>
+				<h3>Quels sont les autres réseaux qui sont traversés ? </h3>
+				<p>
+					Les réseaux ci-dessous sont listés:
+					<br>
+					vl1488-te0-1-0-2-ren-nr-marne-rtr-091.noc.renater.fr
+					<br>
+					vl630-te0-0-0-11-ren-nr-jussieu-rtr-091.noc.renater.fr
+					<br>
+					xe-0-0-23-ren-nr-paris2-rtr-131.noc.renater.fr
+				</p>
+			</li>
+			<li>
+				<h3>Quel est le nom de la machine hébergeant le site Web ? </h3>
+				<p>
+					La machine est "www".
+				</p>
+				<h3>Quel est le nom de domaine associé à cette machine ? </h3>
+				<p>
+					Le nom de domaine associé est "mai-ko.com"
+				</p>
+				<h3>Trouvez quelle est la ville (sur terre) de l'hébergeur de cette organisation.</h3>
+				<p>
+					whois mai-ko.com | grep -i city
+					<br>
+					La ville (sur terre) est Kyoto.
+				</p>
+				<h3>Les temps affichés et le ttl vous semble-t'il corrects ?</h3>
+				<p>
+					Les temps affichés sont supérieurs à 200ms en moyenne, ce qui semble correct pour un serveur
+					extra-européen, en particulier pour
+					le Japon.
+				</p>
+				<h3>Faire de même avec la machine forax.github.io qui héberge le cours (whois + ping)</h3>
+				<p>
+
+				</p>
+				<h3>Que pouvez vous en déduire (regarder le temps du ping et aussi le ttl) ?</h3>
+				<p>
+					Le temps de ping est, cette fois-ci, bien plus court (quelques microsecondes).
+					<br>
+					Cela correspond bien aux délais d'un serveur Américain.
+				</p>
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Exercice 3 - Service HTTP</h2>
+		<ol>
+			<li></li>
+			<li>
+				<h3>Utilisez la commande grep sur le fichier /etc/services pour déterminer le numéro du port TCP
+					correspondant au service http. </h3>
+				<p>
+					man /etc/services | grep -i http
+					<br>
+					Le numéro du port pour HTTP est le port 80.
+				</p>
+			</li>
+			<li></li>
+			<li>
+				<h3>A quoi correspondent les 3 valeurs sur la première ligne de l'entête ?</h3>
+				<p>
+					La première valeur est la version du protocole HTTP utilisé en réponse par le serveur distant.
+					<br>
+					La deuxième valeur est le code de retour HTTP (ici, un code 4XX, ce qui indique une erreur due au
+					client).
+					<br>
+					La troisième valeur est le message associé au code de retour HTTP.
+				</p>
+			</li>
+			<li>
+				<h3>A quoi correspond la valeur de Content-Type ?</h3>
+				<p>
+					La valeur de Content-Type correspond au type de contenu du corp (body) de la réponse HTTP.
+					<br>
+					Ici, le type de contenu est "text/html", ce qui permet à un navigateur web d'afficher la réponse
+					sous le bon format, et non d'afficher le texte brut à l'écran.
+				</p>
+			</li>
+			<li>
+				<h3>A quoi correspond la valeur de Content-Length ?</h3>
+				<p>
+					La valeur de Content-Length correspond à la taille du contenu de la réponse HTTP envoyée au client
+					(en octets).
+				</p>
+			</li>
+			<li></li>
+			<li>
+				<h3>Pourquoi dans la version 1.1 du protocole HTTP, on doit fournir le Host ?</h3>
+				<p>
+					Dans la version 1.1 du protocole HTTP, on doit fournir le Host pour permettre au serveur de savoir
+					quelle ressource demander.
+					<br>
+					En effet, un même serveur peut, depuis cette version, héberger plusieurs sites web. Il doit donc
+					savoir quel site web est demandé par le client.
+				</p>
+			</li>
+			<li>
+				<h3>Enfin, sur la machine www.forax.org, faite la requête suivante et analysé la réponse. A quoi
+					correspond la valeur de location ?</h3>
+				<p>
+					La valeur de location retournée est: "http://www-igm.univ-mlv.fr/~forax".
+				</p>
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Exercice 4 - Les listes et les tables</h2>
+		<ol>
+			<li></li>
+			<li>
+				<h3>Indiquer dans votre compte rendu comme vous avez fait pour trouver la réponse et indiquez où elle se
+					situe dans le document.</h3>
+				<p>
+					Pour trouver la réponse, j'ai cherché la catégorie décrivant l'élément "td" dans la table des
+					matières complète.
+					<br>
+					La table contenant beaucoup d'éléments, j'ai utilisé le raccourci "Ctrl+F" permettant de chercher
+					les occurences d'un paramètre donné.
+					<br>
+					Une fois le paramètre "td" passé, le premier résultat correspond à la page de documentation que l'on
+					cherche.
+					<br>
+					La réponse est donnée en quelques lignes (sous-partie "Content Attributes"), il n'y a pas besoin
+					d'entreprendre de plus amples recherches.
+				</p>
+			</li>
+			<li>
+				<h3>Vérifier que votre compte-rendu passe bien le validateur de HTML</h3>
+				<p>
+					Document checking completed. No errors or warnings to show.
+				</p>
+			</li>
+		</ol>
+	</div>
+
+	<div class="categ">
+		<h2>Conclusion personnelle</h2>
+		<p>
+			Ce premier TP permet de nous familiariser aux bases de l'HTML, du protocole HTTP et de la récolte basique d'informations à partir d'une URL.
+			<br>
+			<br>
+			Certaines questions, notamment pour l'exercice 4, demandent une mise en page (au travers de CSS) et une structure de page plus soignée. 
+			<br>
+			L'objectif final est d'inciter les étudiants à rendre un code propre, structuré, et suivant les bonnes normes et pratiques de chaque langage utilisé.
+		</p>
+	</div>
+</body>
+
+</html>
