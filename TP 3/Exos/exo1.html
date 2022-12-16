@@ -1,0 +1,23 @@
+<html><head>
+    <meta charset="utf-8">
+    <script src="exos.js"></script>
+    <script>
+        "use strict";
+
+        window.onload = () => {
+            /*
+            Question 1-4-1
+             */
+            let canvas = document.getElementById("clock");
+            let context = canvas.getContext("2d");
+            window.setInterval(refresh, 1000, canvas, context);
+        };
+    </script>
+</head>
+<body>
+<h2>Oh, ma belle horloge !</h2>
+<canvas id="clock" width="800" height="800">
+</canvas>
+
+
+</body></html>

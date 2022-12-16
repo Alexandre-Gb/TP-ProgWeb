@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./compte-rendu-tp3.css">
+    <title>Compte Rendu de TP3 - GIBOZ Alexandre</title>
+</head>
+<body>
+    <h1 class="centered titles">
+        Compte rendu TP3 - Alexandre GIBOZ
+    </h1>
+
+    <div class="categ">
+        <p>
+            Les deux fichiers d'exercices (exo1.html et exo2.html) sont situés dans le répertoire "Exos".
+        </p>
+    </div>
+
+    <div class="categ">
+        <h2>Exercice 1 - Horloge</h2>
+        <ol>
+            <li>
+                <h3>Que se passe-t-il lorsque l'on la visualise ?</h3>
+                <p>
+                    En inspectant la page, on remarque la présence d'une zone "canvas" dans le corp de la page, ainsi qu'une partie de script dans la partie d'en-tête.
+                    <br>Dans l'onglet "console" disponible dans le devkit de n'importe quel navigateur web moderne, on peut observer le script en action.
+                    <br>On remarque qu'un message "tick !" est référencé au sein de cet onglet.
+                </p>
+                <img src="./img/1-1.png" alt="prev 1-1" width="500">
+                <br>
+                <h3>Expliquez ce que fait window.onload = loaded et window.setTimeout(refresh, 1000) ?</h3>
+                <p>
+                    Le gestionnaire d'évènement "onload" permet d'effectuer une action uniquement une fois que la page a fini de charger.
+                    <br>
+                    La méthode setTimeout permet d'exécuter une fonction ou un morceau de code une fois le délai spécifié expiré.
+                    <br>Dans notre cas, une fois qu'une seconde est écoulée depuis que la page est entièrement chargée, la fonction "refresh" va être exécutée, et afficher le message "tick !" dans la console.
+                </p>
+            </li>
+            <li>
+                <h3>Transformez le code pour utiliser window.setInterval().</h3>
+                <p>
+                    On remplace l'appel "window.setTimeout" par celui demandé, afin d'appeler la fonction "refresh" chaque seconde.
+                    <br>
+                    <br>On obsèrve ci-dessous le résultat obtenu dans la console après un peu plus de deux minutes d'attente.
+                    <br>On constate qu'il y a eu "161" affichage de "tick !" dans la console.
+                </p>
+                <img src="./img/1-2.png" alt="code 1-2" width="458">
+                <br>
+                <img src="./img/1-2-2.png" alt="prev 1-2" width="458">
+            </li>
+            <li>
+                <h3>Transformez le code pour afficher la date courante avec new Date().</h3>
+                <p>
+                    Pour ce faire, on remplace le contenu de la méthode console.log (texte "tick !") par la date.
+                </p>
+                <img src="./img/1-3-1.png" alt="code 1-3-1" width="458">
+                <br>
+                <img src="./img/1-3-2.png" alt="prev 1-3-2" width="458">
+                <h3>Changez le code pour afficher l'heure, les minutes et les secondes sur la console.</h3>
+                <p>
+                    On créer la date au sein d'une variable "let".
+                    <br>On concatène les méthodes demandées, en séparant chacune par ":", afin d'obtenir un affichage réaliste.
+                </p>
+                <img src="./img/1-3-3.png" alt="code 1-3-3" width="458">
+                <br>
+                <img src="./img/1-3-4.png" alt="prev 1-3-4" width="458">
+            </li>
+            <li>
+                <h3>Récupérer le canvas à partir de son id et récupérer le context associé.</h3>
+                <p>
+                    On récupère l'élement au travers de la méthode "document.getElementById()".
+                    <br>On passe l'id du canvas à la méthode, afin de récupérer lb non élément.
+                    <br>On récupère ensuite le contexte de la variable contenant le canvas.
+                </p>
+                <img src="./img/1-4-1.png" alt="code 1-4-1" width="608">
+                <h3>Passer le canvas et le context en paramètre de la fonction refresh et dans refresh afficher sur la console la largeur (width) et la hauteur (height) du canvas.</h3>
+                <p>
+                    On rajoute à la méthode setInterval les deux arguments que l'on souhaite passer (ajoutés en paramètre de la fonction "refresh" au préalable).
+                    <br>Une fois que ces variables ont été passées en paramètres, on utilise la variable "canvas" afin d'extraire la largeur et la longueuer du canvas.
+                    <br>On récupère ces valeurs au sein d'un "console.log" afin d'afficher ces valeurs dans la console.
+                </p>
+                <img src="./img/1-4-2.png" alt="code 1-4-2" width="600">
+                <br>
+                <img src="./img/1-4-4.png" alt="code 1-4-4" width="600">
+                <br>
+                <img src="./img/1-4-3.png" alt="prev 1-4-3" width="600">
+                <h3>Modifier la fonction refresh pour afficher une aiguille indiquant midi (ou 0 minute, ou 0 seconde).</h3>
+                <p>
+                    On effectue un tracé dans le canvas.
+                    <br>On définit d'abord que l'on souhaite obtenir un tracé de couleur noir et d'épaisseur 2 pixels.
+                    <br>Ensuite, on positionne le point de départ du tracé au milieu du canvas (largeur/2 et hauteur/2)
+                    <br>Enfin, on effectue un tracé jusqu'a 100 pixels au dessus du point de départ (ligne droite pointant vers "0" d'une horloge).
+                </p>
+                <img src="./img/1-4-5.png" alt="code 1-4-5" width="600">
+                <br>
+                <img src="./img/1-4-6.png" alt="code 1-4-6" width="600">
+            </li>
+            <li>
+                <h3>Dessinez un cercle de rayon radius pixels centré dans le canvas, avec radius égal à 80% du minimum entre la largeur (canvas.width) et la hauter canvas.height du canvas.</h3>
+                <p>
+                    On commence par placer au sein d'une variable la valeur minimale entre hauteur et largeur du canvas.
+                    <br>Ensuite, on trace un cercle via la méthode "arc".
+                    <br>On place le cercle au centre du canvas (hauteur et largeur /2).
+                    <br>On souhaite que la radius soit 80% du côté le moins grand du canvas. On utilise donc le contenu de la variable "min" qui a servi à comparer la hauteur et largeur du canvas.
+                    <br>L'angle de départ sera 0, et ira jusqu'a 4*PI/2 afin de former un cercle complet.
+                </p>
+                <img src="./img/1-5.png" alt="code 1-5" width="600">
+                <br>
+                <img src="./img/1-5-2.png" alt="code 1-5-2" width="600">
+            </li>
+            <li>
+                <h3>Indiquez les formules mathématiques qui permettent pour une valeur de 0 à 60 secondes de trouver les coordonnées x et y du sommet de l'aiguille.</h3>
+                <p>
+                    La formule est la suivante:
+                    <br>x2: milieu de la largeur + ((minimale / 2) * 0.8) * cos(PI * (seconde - 15) / 30)
+                    <br>y2: milieu de la hauteur + ((minimale / 2) * 0.8) * sin(PI * (seconde - 15) / 30)
+                    <br>
+                    <br>(minimale = valeur minimale entre hauteur et largeur du canvas)
+                </p>
+            </li>
+            <li>
+                <h3>Modifiez le code pour faire bouger la trotteuse (nom de l'aiguille des secondes) en fonction des secondes.</h3>
+                <p>
+                    On modifie les arguments passés à la méthode lineTo traçant la ligne représentant l'aiguille. On lui passe la formule du dessus.
+                    <br>De plus, au début de la fonction refresh, on rajoute un "context.clearRect" afin de supprimer le contenu du canvas avant de ré-afficher la trotteuse (qui aura une nouvelle position).
+                    <br>On spécifie que la totalité du canvas doit être supprimé: D'en haut à gauche (x0 y0) au bas à droite (height et width)
+                </p>
+                <img src="./img/1-7.png" alt="code 1-7" width="1000">
+                <br>
+                <img src="./img/1-7-2.png" alt="code 1-7-2" width="400">
+            </li>
+            <li>
+                <h3>
+                    Modifiez votre code pour afficher la trotteuse en rouge et le cadre en bleu clair.
+                    <br>
+                    Réglez à 3 pixels l'épaisseur du trait du cadre.
+                </h3>
+                <p>
+                    La méthode "context.strokeStyle" permet de modifier la couleur du tracé. On lui passe donc la valeur "red" pour la trotteuse, et "lightblue" pour le cadre.
+                    <br>
+                    La méthode "context.lineWidth" permet de définir l'épaisseur du tracé en pixels. Nous voulons un tracé de 3 pixels pour le cadre, on passera donc 3 en argument.
+                </p>
+                <img src="./img/1-8.png" alt="code 1-8" width="450">
+                <br>
+                <img src="./img/1-8-2.png" alt="code 1-8-2" width="450">
+                <br>
+                <img src="./img/1-8-3.png" alt="prev 1-8-3" width="550">
+            </li>
+            <li>
+                <h3>Affichez en plus de la trotteuse, l'aiguille des minutes (la grande aiguille) en noire.</h3>
+                <p>
+                    Afin d'éviter la répétition de code, et étant donné qu'une aiguille pour les heures sera surement attendue après, on met en place une fonction dessinant une aiguille.
+                    <br>Cette fonction prendra de nombreux paramètres, permettant d'en modifier l'apparence et la méthode de fonctionnement (de 0 à 24, de 0 à 60...).
+                    <br>Afin de répondre au dernier problème énoncé, on modifie un peu la formule afin que la totalité de la zone de rotation marche pour n'importe quel couple de valeur (valeur et valeur maximale), et non uniquement 60.
+                    <br>En dehors de cela, le comportement de la fonction est relativement similaire au tracé précédent.
+                    <br>Pour finir, on appelle la fonction deux fois, afin de tracer les deux aiguilles.
+                </p>
+                <img src="./img/1-9.png" alt="code 1-9" width="900">
+                <br>
+                <img src="./img/1-9-2.png" alt="code 1-9-2" width="700">
+                <br>
+                <img src="./img/1-9-3.png" alt="prev 1-9-3" width="550">
+            </li>
+            <li>
+                <h3>Ajoutez l'aiguille des heures, qui doit être d'une longueur inférieure aux deux autres aiguilles (disons 80%), mais plus large, toujours en essayant de 'factoriser' le code.</h3>
+                <p>
+                    Grace à la fonction de tracé, l'ajout de l'aiguille est relativement simplifié.
+                    <br>On se contentera d'appeller la fonction, mais de passer une longueur moindre pour une largeur accrue, ainsi qu'un seuil de valeur vallant 24 .
+                </p>
+                <img src="./img/1-10.png" alt="code 1-10" width="700">
+                <br>
+                <img src="./img/1-10-2.png" alt="prev 1-10-2" width="550">
+            </li>
+            <li>
+                <h3>Ajoutez 12 traits de graduation ('ticks') en bleue foncé, autour du cadre de l'horloge. Un trait aura une longueur de 3 pixels.</h3>
+                <p>
+                    Afin de simplifier la mise en place, on va créer une fonction dédiée à cette mission.
+                    <br>La fonction prendra plusieurs arguments afin de pouvoir un minimum customiser l'apparence de ces ticks (longueur, épaisseur, couleur, nombre)
+                    <br>Les formules utilisées afin de placer les points de départ et d'arrivée du tracé sont relativement identiques à celles données précédemment.
+                    <br>Cependant, cette fois-ci, on place les instructions de tracé au sein d'une boucle for, afin que le nombre demandé de ticks soit tracés sans avoir à répéter du code.
+                    <br>Pour faire le tracé, on appelle simplement la fonction en lui donnant les paramètres demandés, à savoir 12 traits bleus d'une longueur de 3 pixels
+                </p>
+                <img src="./img/1-11.png" alt="code 1-11" width="700">
+                <br>
+                <img src="./img/1-11-2.png" alt="code 1-11-2" width="550">
+                <br>
+                <img src="./img/1-11-3.png" alt="prev 1-11-3" width="550">
+            </li>
+        </ol>
+    </div>
+
+    <div class="categ">
+        <h2>Exercice 2 - Horloges de différentes tailles</h2>
+        <ol>
+            <li>
+                <h3>Faites en sorte que la taille de l'horloge puisse varier en fonction de la taille du canvas</h3>
+                <p>
+                    On commence par placer l'ensemble du travail précédemment effectué dans un fichier ".js", afin de pouvoir le ré-utiliser simplement.
+                    <br>On sélectionne les deux canvas dans deux variables distinctes, puis on appelle la fonction comme pour l'exo 1.
+                    <br>La fonction de resize par rapport au côté de longueur minimale étant déja réalisée au cours d'exercices précédents, rien n'est à modifier.
+                </p>
+                <img src="./img/2-1.png" alt="prev 2-1" width="550">
+            </li>
+            <li>
+                <h3>Faites en sorte d'avoir une fonction startClock qui prend en paramètre l'id d'un canvas qui sert d'unique point d'entrée pour faire fonctionner une horloge.</h3>
+                <p>
+                    On créer la fonction qui prendra comme unique paramètre l'identifiant du canvas.
+                    <br>La fonction va ensuite récupérer le canvas et le contexte de ce dernier via cet identifiant, puis, de la même manière qu'avant, va appeler la fonction "refresh" chaque seconde.
+                </p>
+                <img src="./img/2-2.png" alt="code 2-2" width="700">
+                <br>
+                <img src="./img/2-2-2.png" alt="prev 2-2-2" width="550">
+            </li>
+            <li>
+                <h3>Question top moumoute, faites en sorte de garantir que les aiguilles des différentes horloges soient synchrones (i.e. misent à jour toutes en même temps).</h3>
+                <p>
+                    Afin d'actualiser au même moment un ensemble d'horloges, il sera nécessaire de passer ces horloges au sein d'un tableau,
+                    <br>et de l'utiliser au sein d'une fonction allant parcourir le tableau afin d'appeller la fonction refresh au même moment, pour chaque horloge.
+                    <br>Ainsi, à chaque sélection de canvas via la fonction "startClock", on va placer le canvas et le contexte sélectionné dans le tableau.
+                    <br>Un eventListener appellant cette fonction de synchronisation chaque seconde sera alors ajouté au fichier de script, afin de garantir la synchronisation de toutes les horloges.
+                </p>
+                <img src="./img/2-3.png" alt="code 2-3" width="700">
+                <br>
+                <img src="./img/2-3-2.png" alt="code 2-3-2" width="550">
+            </li>
+        </ol>
+    </div>
+
+    <div class="categ">
+        <h2>Conclusion Personnelle</h2>
+        <p>
+            Ce troisième et dernier TP pour ce semestre se focalise essentiellement sur JavaScript.
+            <br>Il nous aide essentiellement à nous familiariser avec la manipulation d'éléments HTML depuis une partie de script, et en particulier l'élément "canvas".
+            <br>
+            <br>L'essentiel du TP s'articule autour de la mise en fonction d'une horloge dessinée sur un élément de canvas, en prenant en compte son actualisation constante, le bon respect de la taille du canvas,
+            <br>la bonne position des aiguilles et ticks au travers de formules mathématiques de trigonométrie.
+            <br>Mener à bien ces tâches passe par une étape de familiarisation avec les différentes méthodes fournies par JavaScript, comme la fonction Math, ou encore d'autres méthodes rattachées à la propriété "document" ou "date".
+            <br>De plus, afin d'analyser le comportement du code, il est nécessaire d'apprendre à manier l'outil de console qui est fournit avec chaque navigateur web moderne, afin d'apercevoir les erreurs et logs générés par notre script.
+            <br>Ce compte-rendu passe la validation W3c.
+        </p>
+    </div>
+</body>
+</html>
